@@ -1,0 +1,58 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			// uni-ui 规则如下配置
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+			//以XX（自定义）开头的组件，在components文件夹中引入（需重启）
+			"^My(.*)":"@/components/My$1/My$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "login"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "my"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#a3a3a3",
+		"selectedColor": "#a3a3a3",
+		"borderStyle": "white", //底部的上边框线条
+		"backgroundColor": "#ffffff",
+		"fontSize": "14px", //字体大小
+		"spacing": "5px", //字体到图标的距离
+		"height": "50px", //底部高
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/image/home.png",
+			"selectedIconPath": "static/image/homeactive.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/my/my",
+			"iconPath": "static/image/my.png",
+			"selectedIconPath": "static/image/myactive.png",
+			"text": "我的"
+		}]
+	},
+}
