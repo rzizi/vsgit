@@ -1,32 +1,5 @@
+//基地址
 const baseURL="https://pcapi-xiaotuxian-front-devtest.itheima.net"
-
-// // 添加拦截器
-// const httpInterceptor={
-//     //拦截器触发
-//     invoke(options:UniApp.RequestOptions){
-//         console.log(options,"22222222222222222");
-        
-//         // 1.非http开头需拼接地址
-//         if(!options.url.startsWith('http')){
-//             options.url=baseURL+options.url
-//         }
-//         //2.请求超时
-//         options.timeout=1000
-//         //3.添加请求头标识
-//         options.header={}
-//         //4.添加token请求头标识
-//         // const token=... 如果token存在
-//         // if(token){options.header.Authorization = token}
-// //
-//     }
-// }
-
-// //拦截 request 请求
-// //拦截 uploadFile 文件上传
-// //公用一个配置
-// uni.addInterceptor("request",httpInterceptor)
-// uni.addInterceptor("uploadFile",httpInterceptor)
-
 
 //对接口的一个定义
 interface Data<T>{ //泛型
